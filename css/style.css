@@ -93,12 +93,21 @@ body {
   /* .header__menu */
   /* .header__button */
 }
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 0rem;
+  }
+}
 .header__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   gap: 20px;
+}
+.header__logo {
+  position: relative;
+  z-index: 2;
 }
 @media (max-width: 500px) {
   .header__logo img {
@@ -112,6 +121,8 @@ body {
   height: 50px;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 @media (max-width: 950px) {
   .header__button {
@@ -125,8 +136,8 @@ body {
 }
 @media (max-width: 768px) {
   .header__button {
-    padding: 20px;
-    background-size: 20px;
+    padding: 15px;
+    background-size: 15px;
     background-position: center center;
   }
 }
@@ -179,34 +190,59 @@ body {
 }
 
 .menu {
-  display: none;
+  position: static;
   width: 100%;
-  position: fixed;
-  height: 100%;
-  left: 0;
-  top: 0;
   /* .menu__list */
   /* .menu__item */
   /* .menu__link */
 }
-.menu ::after {
-  content: "";
-  display: none;
-  background-color: #171A21;
-  position: fixed;
-  left: 0;
-  top: 0;
-  height: 110px;
-  width: 100%;
+@media (max-width: 768px) {
+  .menu {
+    background-color: rgba(23, 26, 33, 0.75);
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    padding: 100px 0px 20px 0px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+  }
+  .menu ::after {
+    content: "";
+    background-color: #171A21;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 75px;
+    width: 100%;
+  }
+  .menu.active {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 .menu__list {
   display: flex;
+  width: 100%;
   justify-content: space-evenly;
 }
 @media (max-width: 950px) {
   .menu__list {
     flex-wrap: wrap;
     row-gap: 8px;
+  }
+}
+@media (max-width: 768px) {
+  .menu__list {
+    display: block;
+  }
+  .menu__list li {
+    margin: 0px 0px 20px 0px;
+  }
+  .menu__list li:last-child {
+    margin: 0px 0px 0px 0px;
   }
 }
 .menu__item {
@@ -219,5 +255,10 @@ body {
 @media (max-width: 950px) {
   .menu__item {
     flex: 0 0 33.333%;
+  }
+}
+@media (max-width: 768px) {
+  .menu__item {
+    font-size: 2.8rem;
   }
 }
