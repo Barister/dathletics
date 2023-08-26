@@ -205,10 +205,10 @@ body {
 }
 .menu {
    //display: none;
-   position: static;
+   position: relative;
    width: 100%;
    @media (max-width: 768px) {
-      background-color: rgba(23, 26, 33, 0.75);
+      background-color: rgba(23, 26, 33, 0.8);
       position: fixed;
       height: 100%;
       left: 0;
@@ -280,17 +280,21 @@ body {
 
 .page {
    padding: 110px 0px 0px 0px;
+   display: flex;
+      flex-direction: column;
+
    /* .page__main */
 
    &__main {
       display: flex;
       flex-direction: column;
       //justify-content: space-between;
-      height: 100vh;
+      //height: 100vh;
    }
 }
 .main-section {
-
+   min-height: 100%;
+   flex: 1 1 auto;
    /* .main-section__hero */
 
    &__hero {
@@ -303,7 +307,7 @@ body {
    /* .main-section__services */
 
    &__services {
-      flex: 1 1 35%;
+      flex: 0 1 35%;
    }
 }
 .section-hero {
@@ -311,13 +315,15 @@ body {
    /* .section-hero__container */
 
    &__container {
-      position: absolute;
+      position: relative;
       z-index: 2;
       width: 100%;
       height: 100%;
       //max-height: 600px;
-      left: 50%;
-      transform: translate(-50%, 0%);
+      //left: 50%;
+      //transform: translate(-50%, 0%);
+      //min-height: min-content;
+      padding: 30px 10px 30px 10px;
    }
 
    /* .section-hero__content */
@@ -325,7 +331,7 @@ body {
    &__content {
       margin: 30px 0px 0px 0px;
       text-align: center;
-      
+      padding: 30px 10px 30px 10px;
    }
 
    /* .section-hero__title */
@@ -353,9 +359,11 @@ body {
    /* .section-hero__background */
 
    &__background {
-      position: relative;
+      position: absolute;
       width: 100%;
       height: 100%;
+      top: 0;
+      left: 0;
       //max-height: 600px;
    }
 }
@@ -395,14 +403,19 @@ body {
 
    &__item {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
-      //gap: 30px;
+      gap: 30px;
       font-size: 1.8rem;
       color: #fff;
       width: 100%;
+      padding: 0px 20px;
+      img {
+         margin: 0px 20px 0px 0px;
+      }
       span {
-         
+         display: block;
+         text-align: right;
       }
    }
 }
