@@ -85,6 +85,12 @@ body {
    background-color: #C2F9BB;
    padding: 20px 65px;
    border-radius: 36px;
+   letter-spacing: 1.875px;
+}
+
+.title {
+   color: #C2F9BB;
+   font-size: 3.6rem;
 }
 
 // Modules
@@ -204,7 +210,7 @@ body {
 	}
 }
 .menu {
-   //display: none;
+   
    position: relative;
    width: 100%;
    @media (max-width: 768px) {
@@ -220,7 +226,7 @@ body {
       transition: all 0.3s ease 0s;
       ::after {
          content: '';
-         //display: none;
+         
          background-color: #171A21;
          position: fixed;
          left: 0;
@@ -293,8 +299,6 @@ body {
    &__main {
       display: flex;
       flex-direction: column;
-      //justify-content: space-between;
-      //height: 100vh;
    }
 }
 .main-section {
@@ -305,8 +309,6 @@ body {
    &__hero {
       flex: 1 1 65%;
       position: relative;
-      //max-height: 600px;
-      //margin: 0px 0px 20px 0px;
    }
 
    /* .main-section__services */
@@ -324,10 +326,6 @@ body {
       z-index: 2;
       width: 100%;
       height: 100%;
-      //max-height: 600px;
-      //left: 50%;
-      //transform: translate(-50%, 0%);
-      //min-height: min-content;
       padding: 30px 10px 30px 10px;
    }
 
@@ -342,9 +340,7 @@ body {
    /* .section-hero__title */
 
    &__title {
-      color: #C2F9BB;
       text-align: center;
-      font-size: 3.6rem;
       max-width: 56.0rem;
       margin: 0 auto;
       margin-bottom: 65px;
@@ -391,8 +387,6 @@ body {
 
    &__container {
       max-width: 1000px;
-      //display: flex;
-      //align-items: center;
       padding: 0px 0px 0px 0px;
       @media (max-width: 1000px) {
          padding: 0px 20px 0px 20px;
@@ -405,7 +399,7 @@ body {
 
    &__items {
       display: grid;
-      //justify-content: space-between;
+      justify-content: space-between;
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       column-gap: 20px;
       row-gap: 60px;
@@ -441,3 +435,122 @@ body {
    width: 40px;
    height: 40px;
 }
+
+
+.page {
+   
+   /* .page__actions */
+
+   &__actions {
+      padding: 90px 0px 90px 0px;
+      @media (max-width: 950px) {
+         padding: 70px 0px 90px 0px;
+      }
+      @media (max-width: 500px) {
+         padding: 50px 0px 70px 0px;
+      }
+   }
+}
+.actions-section {
+
+   /* .actions-section__container */
+
+   &__container {
+   }
+
+   /* .actions-section__title */
+
+   &__title {
+      letter-spacing: 2.7px;
+      margin: 0px 0px 35px 0px;
+   }
+
+   /* .actions-section__content */
+
+   &__content {
+
+   }
+}
+
+.content-actions {
+   display: grid;
+   justify-content: space-between;
+   // align-items: stretch;
+   justify-items: stretch;
+   gap: 40px;
+   // flex-wrap: wrap;
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+   
+   /* .content-actions__image */
+
+   &__image {
+      // flex: 1 1 40%;
+      max-width: 542px;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      img {
+         position: relative;
+         top: 0;
+         left: 0;
+         object-fit: contain;
+         height: 100%;
+         width: 100%;
+         border-radius: 12px;
+      }
+   }
+
+   /* .content-actions__content */
+
+   &__content {
+      flex: 1 1 auto;
+      border-left: 1px #C2F9BB solid;
+      border-bottom: 1px #C2F9BB solid;
+      //max-width: 680px;
+      padding: 60px 0px 60px 10%;
+      display: flex;
+      flex-direction: column;
+      //align-items: center;
+      justify-content: center;
+      gap: 90px;
+      @media (max-width: 500px) {
+         padding: 40px 0px 60px 20px;
+         gap: 50px;
+      }
+   }
+
+   /* .content-actions__title */
+
+   &__title {
+      max-width: 320px;
+      color: #E8D7F1;
+      font-size: 2.5rem;
+      letter-spacing: 1.875px;
+      span {
+         color: #C2F9BB;
+      }
+   }
+
+   /* .content-actions__subtitle */
+
+   &__subtitle {
+      max-width: 250px;
+      color: #FFF;
+      letter-spacing: 1.2px;
+   }
+
+   /* .content-actions__button */
+
+   &__button {
+      width: max-content;
+      text-align: center;
+      font-size: 1.8rem;
+      @media (max-width: 950px) {
+         width: min-content;
+      }
+      @media (max-width: 636px) {
+         width: fit-content;
+      }
+   }
+}
+
