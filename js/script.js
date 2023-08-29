@@ -13,56 +13,34 @@ burger.addEventListener('click', () => {
 // catalog tabs
 
 
+function changeTab(event, category) {
 
-// function changeTab(category) {
-//    const contents = document.querySelector('.tabs-catalog');
-//    console.log('contents:', contents);
+   event.preventDefault();
 
-//    contents.addEventListener('click', (event) => {
-//       console.log('event:', event);
+   const tabs = document.querySelectorAll('.tabs-catalog__tab');
 
-//       let clickedTab = event.target;
+   tabs.forEach(tab => {
 
-//       console.log('clickedTab:', clickedTab);
-
-
-//       return clickedTab.classList.toggle('active');
-//    });
-
+      if (tab.dataset.category === category) {
+         tab.classList.add('active');
+      } else {
+         tab.classList.remove('active');
+      }
+   });
 
 
 
-
-//    // contents.forEach(content => {
-
-//    //    console.log('content:', content);
-//    //    // content.
-
-//    //    const contentCategories = content.classList.contains(category) || category === 'all';
-//    //    if (contentCategories) {
-//    //       content.style.display = 'block';
-//    //    } else {
-//    //       content.style.display = 'none';
-//    //    }
-//    // });
-// }
-
-// Изначально показываем все карточки
-//changeTab('all');
-
-
-function changeTab(category) {
    const contents = document.querySelectorAll('.cards-catalog__item');
-
-   console.log('contents:', contents);
+   const maxVisibleItems = 8; // Максимальное количество отображаемых элементов
+   let visibleItemCount = 0; // Счетчик отображенных элементов
 
    contents.forEach(content => {
-      if (category === 'all' || content.dataset.category.includes(category)) {
+      if (visibleItemCount < maxVisibleItems && (category === 'all' || content.dataset.category.includes(category))) {
          content.style.display = 'flex';
+         visibleItemCount++;
       } else {
          content.style.display = 'none';
       }
    });
 }
 
-changeTab('all');
