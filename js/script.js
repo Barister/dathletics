@@ -1,3 +1,21 @@
+// scroll-background
+
+const header = document.querySelector('.header');
+const logo = document.querySelector('.header__logo');
+
+function toggleHeaderClass() {
+   if (window.scrollY > 0) {
+      header.classList.add('scroll');
+      logo.classList.add('scroll');
+   } else {
+      header.classList.remove('scroll');
+      logo.classList.remove('scroll');
+   }
+}
+
+window.addEventListener('scroll', toggleHeaderClass);
+
+
 //burger activation
 
 const burger = document.querySelector('.header__burger');
@@ -28,8 +46,6 @@ function changeTab(event, category) {
       }
    });
 
-
-
    const contents = document.querySelectorAll('.cards-catalog__item');
    const maxVisibleItems = 8; // Максимальное количество отображаемых элементов
    let visibleItemCount = 0; // Счетчик отображенных элементов
@@ -44,3 +60,26 @@ function changeTab(event, category) {
    });
 }
 
+
+
+// Вызывается при полной загрузке контента
+document.addEventListener('DOMContentLoaded', function () {
+   // Создание пользовательского события
+   const customEvent = new Event('customInit');
+
+   // Вызов функции changeTab с созданным событием и категорией 'all'
+   changeTab(customEvent, 'all');
+});
+
+changeTab(event, 'all');
+
+// More click active
+
+const elseHeader = document.querySelector('.else-catalog__header');
+const elseMenu = document.querySelector('.else-catalog__menu');
+
+elseHeader.addEventListener('click', () => {
+
+   elseMenu.classList.toggle('active');
+
+});

@@ -17,7 +17,7 @@
             </div>
 
             <div class="header__logo">
-               <img src="img/logo.svg" alt="D'Athletics Logo">
+               <a href="#"><img src="img/logo.svg" alt="D'Athletics Logo"></a>
             </div>
 
             <nav class="header__menu menu">
@@ -430,10 +430,23 @@
                   </div>
                </div>
 
-               <div class="catalog-section__else">Еще</div>
+               <div id="else-catalog" class="catalog-section__else else-catalog">
+                  <div class="else-catalog__header">Еще</div>
+                  <ul class="else-catalog__menu">
+                     <li><a href="#else-catalog">10</a></li>
+                     <li><a href="#else-catalog">20</a></li>
+                  </ul>
+
+               </div>
             </div>
          </section>
-         <section class="page__testimonials testimonials-section"></section>
+         <section class="page__testimonials testimonials-section">
+            <div class="testimonials-section__container">
+               <h2 class="testimonials-section__title title">
+                  Отзывы
+               </h2>
+            </div>
+         </section>
          <section class="page__gallery gallery-section"></section>
          <section class="page__contacts contacts-section"></section>
       </main>

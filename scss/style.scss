@@ -91,6 +91,7 @@ body {
 .title {
    color: #C2F9BB;
    font-size: 3.6rem;
+   text-transform: uppercase;
 }
 
 // Modules
@@ -104,6 +105,12 @@ body {
    width: 100%;
    z-index: 10;
    padding: 20px 0rem;
+   
+   &.scroll {
+      background-color: rgba(23, 26, 33, 0.85);
+   }
+   
+   
    @media (max-width: 768px) {
       padding: 10px 0rem;
    }
@@ -302,7 +309,7 @@ body {
    }
 }
 .main-section {
-   min-height: 100%;
+   min-height: 85vh;
    flex: 1 1 auto;
    /* .main-section__hero */
 
@@ -580,26 +587,10 @@ body {
    &__content {
    }
 
-   &__else {
-      text-align: right;
-      color: #fff;
-      position: relative;
-      letter-spacing: 1.2px;
-      font-weight: 400;
-      &::after {
-         content: '';
-         display: inline-block;
-         width: 10px;
-         height: 10px;
-         border-left: 2px solid #C2F9BB;
-         border-bottom: 2px solid #C2F9BB;
-         transform: rotate(-45deg);
-         position: relative;
-         bottom: 2px;
-         margin: 0px 0px 0px 5px;
-      }
-   }
+   
 }
+
+
 
 .content-catalog {
 
@@ -642,22 +633,6 @@ body {
       
    }
 
-   
-
-	// /* .tabs-catalog__body */
-	// &__body {
-   //    margin: 0px 0px 70px 0px;
-	// }
-	// /* .tabs-catalog__block */
-	// &__block {
-   //    display: none;
-   //    :target {
-   //       display: block;
-   //    }
-	// }
-
-
-
 }
 .cards-catalog {
    margin: 0px 0px 60px 0px;
@@ -668,10 +643,6 @@ body {
       display: flex;
       flex-direction: column;
       row-gap: 20px;
-      //padding: 10px;
-      //border: 1px solid gray;
-      //margin: 5px;
-      //background-color: white;
    }
 }
 .catalog-card {
@@ -699,3 +670,58 @@ body {
       max-width: 230px;
    }
 }
+
+
+.else-catalog {
+   position: relative;
+   text-align: right;
+   color: #fff;
+   letter-spacing: 1.2px;
+   font-weight: 400;
+   cursor: pointer;
+
+   /* .else-catalog__header */
+
+   &__header {
+      //display: block;
+      
+      
+      position: relative;
+      
+
+   &::after {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-left: 2px solid #C2F9BB;
+      border-bottom: 2px solid #C2F9BB;
+      transform: rotate(-45deg);
+      position: relative;
+      bottom: 2px;
+      margin: 0px 0px 0px 5px;
+   }
+   }
+
+   /* .else-catalog__menu */
+
+   &__menu {
+      position: absolute;
+      top: 25px;
+      right: 0;
+      background-color: #FFF;
+      color: #171A21;
+      padding: 5px 10px;
+      display: none;
+      li {
+         margin: 0px 0px 5px 0px;
+         :hover {
+            font-weight: 700;
+         }
+      }
+      &.active {
+         display: block;
+      }
+   }
+}
+
