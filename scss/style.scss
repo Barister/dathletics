@@ -554,3 +554,147 @@ body {
    }
 }
 
+
+.page {
+
+   /* .page__catalog */
+
+   &__catalog {
+   }
+}
+.catalog-section {
+   margin: 0px 0px 130px 0px;
+   /* .catalog-section__container */
+
+   &__container {
+   }
+
+   /* .catalog-section__title */
+
+   &__title {
+      margin: 0px 0px 45px 0px;
+   }
+
+   /* .catalog-section__content */
+
+   &__content {
+   }
+
+   &__else {
+      text-align: right;
+      color: #fff;
+      position: relative;
+      letter-spacing: 1.2px;
+      font-weight: 400;
+      &::after {
+         content: '';
+         display: inline-block;
+         width: 10px;
+         height: 10px;
+         border-left: 2px solid #C2F9BB;
+         border-bottom: 2px solid #C2F9BB;
+         transform: rotate(-45deg);
+         position: relative;
+         bottom: 2px;
+         margin: 0px 0px 0px 5px;
+      }
+   }
+}
+
+.content-catalog {
+
+   /* .content-catalog__tabs */
+
+   &__tabs {
+      max-width: 850px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 0px 0px 45px 0px;
+   }
+
+   /* .content-catalog__cards */
+
+   &__cards {
+      //display: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      row-gap: 60px;
+      column-gap: 20px;
+      justify-items: center;
+   }
+}
+.tabs-catalog {
+
+   /* .tabs-catalog__tab */
+
+   &__tab {
+      cursor: pointer;
+      text-transform: uppercase;
+      color: #FFF;
+      letter-spacing: 1.2px;
+      &:hover, &.active, &:active {
+         text-decoration: underline;
+         text-decoration-color: #C2F9BB;
+         text-underline-offset: 6px;
+      }
+      
+   }
+
+   
+
+	// /* .tabs-catalog__body */
+	// &__body {
+   //    margin: 0px 0px 70px 0px;
+	// }
+	// /* .tabs-catalog__block */
+	// &__block {
+   //    display: none;
+   //    :target {
+   //       display: block;
+   //    }
+	// }
+
+
+
+}
+.cards-catalog {
+
+   /* .cards-catalog__item */
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      //padding: 10px;
+      //border: 1px solid gray;
+      //margin: 5px;
+      //background-color: white;
+   }
+}
+.catalog-card {
+
+   /* .catalog-card__image */
+
+   &__image {
+   }
+
+   /* .catalog-card__title */
+
+   &__title {
+      color: #C2F9BB;
+      font-size: 2rem;
+      letter-spacing: 1.5px;
+      max-width: 220px;
+   }
+
+   /* .catalog-card__text */
+
+   &__text {
+      color: #FFF;
+      font-size: 1.4rem;
+      letter-spacing: 1.05px;
+      max-width: 230px;
+   }
+}
