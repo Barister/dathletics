@@ -805,8 +805,7 @@ body {
       
    }
 }
-.body-testimonials {
-}
+
 .body-testimonials {
    display: grid;
    grid-template-columns: repeat(4, 522px);
@@ -822,3 +821,56 @@ body {
 
 
 
+.page {
+
+   /* .page__gallery */
+
+   &__gallery {
+   }
+}
+.gallery-section {
+   margin: 0px 0px 195px 0px;
+   /* .gallery-section__container */
+
+   &__container {
+   }
+
+   /* .gallery-section__body */
+
+   &__body {
+
+   }
+
+   /* .gallery-section__scroll */
+
+   &__scroll {
+   }
+
+   /* .gallery-section__scroll-bar */
+
+   &__scroll-bar {
+   }
+}
+.gallery-section-title {
+   margin: 0px 0px 40px 0px;
+}
+
+.body-gallery {
+   display: grid;
+   grid-template-columns: repeat(4, 380px);
+   grid-template-rows: 1fr 1fr;
+   gap: 20px;
+   // overflow-x: clip;
+   margin: 0px 0px 45px 0px;
+
+   /* .body-gallery__image */
+
+   &__image {
+      img {
+         border-radius: 17px;
+      }
+      
+   }
+}
+.scroll-bar {
+}
