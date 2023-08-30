@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
    changeTab(customEvent, 'all');
 });
 
-changeTab(event, 'all');
+//changeTab(event, 'all');
 
 // More click active
 
@@ -85,22 +85,50 @@ elseHeader.addEventListener('click', () => {
 });
 
 
-//slider scroll of testimonials-body
+// slider value change after touch move of content
+
+function handleContentScroll(event, contentContainer, scrollBar) {
+   let contentScrollLeft = contentContainer.scrollLeft;
+   let maxScroll = contentContainer.scrollWidth - contentContainer.clientWidth;
+
+   // Нормализовать значение для ползунка
+   let normalizedValue = (contentScrollLeft / maxScroll) * 100;
+
+   // Установить нормализованное значение для ползунка
+   scrollBar.value = normalizedValue;
+}
+
+const testimonialsScrollBar = document.querySelector('.testimonial-section__scroll-bar');
+const testimonialsContentContainer = document.querySelector('.body-testimonials');
+
+const galleryScrollBar = document.querySelector('.gallery-section__scroll-bar');
+const galleryContentContainer = document.querySelector('.body-gallery');
+
+testimonialsContentContainer.addEventListener('touchmove', function (event) {
+   handleContentScroll(event, testimonialsContentContainer, testimonialsScrollBar);
+});
+
+galleryContentContainer.addEventListener('touchmove', function (event) {
+   handleContentScroll(event, galleryContentContainer, galleryScrollBar);
+});
+
+
+
+
+//slider scroll of sections-body-content
 
 function slideSection(targetInput, targetClass) {
-   const scrollBar = document.querySelector(`.${targetInput}`);
-   const scrollContainer = document.querySelector(`.${targetClass}`);
-
-   // console.log('scrollBar:', scrollBar);
-   // console.log('scrollContainer:', scrollContainer);
+   let scrollBar = document.querySelector(`.${targetInput}`);
+   let scrollContainer = document.querySelector(`.${targetClass}`);
 
    // Получаем значение ползунка
    const sliderValue = scrollBar.value;
 
-   // Вычисляем насколько нужно сдвинуть содержимое блока body-testimonials
+   // Вычисляем насколько нужно сдвинуть содержимое блока
    const contentScrollPosition = (sliderValue * (scrollContainer.scrollWidth - scrollContainer.clientWidth)) / 100;
 
-   // Применяем стили для сдвига содержимого блока body-testimonials
-   scrollContainer.style.transform = `translateX(-${contentScrollPosition}px)`;
+   // Прокручиваем блок до указанной позиции
+   scrollContainer.scrollLeft = contentScrollPosition;
 }
+
 

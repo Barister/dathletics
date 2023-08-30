@@ -811,10 +811,15 @@ body {
    grid-template-columns: repeat(4, 522px);
    grid-template-rows: 1fr 1fr;
    gap: 20px;
-   //overflow-x: clip;
-   margin: 0px 0px 45px 0px;
-
    
+   margin: 0px 0px 45px 0px;
+   overflow-x: auto;
+   -webkit-overflow-scrolling: touch; /* Включение плавной прокрутки на WebKit браузерах */
+   &::-webkit-scrollbar {
+      width: 0.5rem; /* Ширина скрытого скролл-бара */
+      height: 0.5rem; /* Высота скрытого скролл-бара (для вертикальной прокрутки) */
+      display: none; /* Скрытие стандартного скролл-бара */
+   }
 }
 
 
@@ -862,6 +867,14 @@ body {
    gap: 20px;
    // overflow-x: clip;
    margin: 0px 0px 45px 0px;
+
+   overflow-x: auto;
+   -webkit-overflow-scrolling: touch; /* Включение плавной прокрутки на WebKit браузерах */
+   &::-webkit-scrollbar {
+      width: 0.5rem; /* Ширина скрытого скролл-бара */
+      height: 0.5rem; /* Высота скрытого скролл-бара (для вертикальной прокрутки) */
+      display: none; /* Скрытие стандартного скролл-бара */
+   }
 
    /* .body-gallery__image */
 
