@@ -83,3 +83,21 @@ elseHeader.addEventListener('click', () => {
    elseMenu.classList.toggle('active');
 
 });
+
+
+//slider scroll of testimonials-body
+
+function slideSection() {
+   const scrollBar = document.querySelector('.scroll-bar');
+   const bodyTestimonials = document.querySelector('.body-testimonials');
+
+   // Получаем значение ползунка
+   const sliderValue = scrollBar.value;
+
+   // Вычисляем насколько нужно сдвинуть содержимое блока body-testimonials
+   const contentScrollPosition = (sliderValue * (bodyTestimonials.scrollWidth - bodyTestimonials.clientWidth)) / 100;
+
+   // Применяем стили для сдвига содержимого блока body-testimonials
+   bodyTestimonials.style.transform = `translateX(-${contentScrollPosition}px)`;
+}
+
