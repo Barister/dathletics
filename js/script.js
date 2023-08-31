@@ -87,7 +87,7 @@ elseHeader.addEventListener('click', () => {
 
 // slider value change after touch move of content
 
-function handleContentScroll(event, contentContainer, scrollBar) {
+function handleContentScroll(contentContainer, scrollBar) {
    let contentScrollLeft = contentContainer.scrollLeft;
    let maxScroll = contentContainer.scrollWidth - contentContainer.clientWidth;
 
@@ -105,11 +105,22 @@ const galleryScrollBar = document.querySelector('.gallery-section__scroll-bar');
 const galleryContentContainer = document.querySelector('.body-gallery');
 
 testimonialsContentContainer.addEventListener('touchmove', function (event) {
-   handleContentScroll(event, testimonialsContentContainer, testimonialsScrollBar);
+   handleContentScroll(testimonialsContentContainer, testimonialsScrollBar);
 });
 
 galleryContentContainer.addEventListener('touchmove', function (event) {
-   handleContentScroll(event, galleryContentContainer, galleryScrollBar);
+
+   handleContentScroll(galleryContentContainer, galleryScrollBar);
+});
+
+testimonialsContentContainer.addEventListener('pointermove', function (event) {
+   event.preventDefault();
+   handleContentScroll(testimonialsContentContainer, testimonialsScrollBar);
+});
+
+galleryContentContainer.addEventListener('pointermove', function (event) {
+   event.preventDefault();
+   handleContentScroll(galleryContentContainer, galleryScrollBar);
 });
 
 
@@ -132,3 +143,20 @@ function slideSection(targetInput, targetClass) {
 }
 
 
+// contacts-form visibility
+
+const messageBtn = document.querySelector('.btn-contacts__message');
+const formDiv = document.querySelector('.content-contacts__form');
+
+messageBtn.addEventListener('click', () => {
+   formDiv.classList.toggle('active');
+})
+
+// toreach visibility
+
+const toreachBtn = document.querySelector('.btn-contacts__reach');
+const toreachDiv = document.querySelector('.content-contacts__toreach');
+
+toreachBtn.addEventListener('click', () => {
+   toreachDiv.classList.toggle('active');
+})
