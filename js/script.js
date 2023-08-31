@@ -16,15 +16,29 @@ function toggleHeaderClass() {
 window.addEventListener('scroll', toggleHeaderClass);
 
 
-//burger activation
+// burger activation
 
 const burger = document.querySelector('.header__burger');
 const headerMenu = document.querySelector('.header__menu');
+const body = document.querySelector('body'); // Получаем элемент <body>
 
 burger.addEventListener('click', () => {
-
    burger.classList.toggle('active');
    headerMenu.classList.toggle('active');
+
+   // Добавляем или убираем класс, чтобы заблокировать/разблокировать скролл
+   body.classList.toggle('scroll-lock');
+});
+
+// Событие при нажатии на ссылку в меню
+headerMenu.addEventListener('click', (event) => {
+   // Проверяем, является ли клик на ссылку
+   if (event.target.tagName === 'A') {
+      // Сворачиваем бургер и меню
+      burger.classList.remove('active');
+      headerMenu.classList.remove('active');
+      body.classList.remove('scroll-lock');
+   }
 });
 
 

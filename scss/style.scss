@@ -121,6 +121,11 @@ body {
    border-radius: 29px;
 }
 
+.scroll-lock {
+   overflow: hidden;
+}
+
+
 //Style CSS
 
 .header {
@@ -596,6 +601,12 @@ body {
 }
 .catalog-section {
    margin: 0px 0px 130px 0px;
+   @media (max-width: 950px) {
+      margin: 0px 0px 90px 0px;
+   }
+   @media (max-width: 500px) {
+      margin: 0px 0px 70px 0px;
+   }
    /* .catalog-section__container */
 
    &__container {
@@ -762,6 +773,12 @@ body {
 }
 .testimonials-section {
    margin: 0px 0px 195px 0px;
+   @media (max-width: 950px) {
+      margin: 0px 0px 130px 0px;
+   }
+   @media (max-width: 500px) {
+      margin: 0px 0px 110px 0px;
+   }
    
    /* .testimonials-section__title */
 
@@ -829,6 +846,13 @@ body {
 
 .gallery-section {
    margin: 0px 0px 195px 0px;
+   @media (max-width: 950px) {
+      margin: 0px 0px 130px 0px;
+   }
+   @media (max-width: 500px) {
+      margin: 0px 0px 110px 0px;
+   }
+
    /* .gallery-section__container */
 
    
@@ -866,7 +890,12 @@ body {
 
 .contacts-section {
    margin: 0px 0px 135px 0px;
-
+   @media (max-width: 950px) {
+      margin: 0px 0px 90px 0px;
+   }
+   @media (max-width: 500px) {
+      margin: 0px 0px 70px 0px;
+   }
    /* .contacts-section__container */
 
    &__container {
