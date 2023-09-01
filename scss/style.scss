@@ -841,9 +841,7 @@ body {
    @media (max-width: 475px) {
       grid-template-columns: repeat(4, 350px);
    }
-   @media (max-width: 375px) {
-      grid-template-columns: repeat(4, 320px);
-   }
+   
    &__card {
       width: 100%;
       img {

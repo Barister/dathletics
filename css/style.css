@@ -744,11 +744,6 @@ body {
     grid-template-columns: repeat(4, 350px);
   }
 }
-@media (max-width: 375px) {
-  .body-testimonials {
-    grid-template-columns: repeat(4, 320px);
-  }
-}
 .body-testimonials__card {
   width: 100%;
 }
