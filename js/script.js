@@ -174,3 +174,34 @@ const toreachDiv = document.querySelector('.content-contacts__toreach');
 toreachBtn.addEventListener('click', () => {
    toreachDiv.classList.toggle('active');
 })
+
+
+//pagination bullet
+
+const bullet = document.querySelector('.wrapper-bullet');
+//const bulletContainer = document.querySelector('.wrapper__container');
+
+const hero = document.querySelector('.section-hero__background');
+
+function positionBullet() {
+   document.addEventListener('DOMContentLoaded', () => {
+
+      let heroCenter = hero.offsetHeight / 2;
+      let startingScrollPosition = window.scrollY;
+
+      console.log('startingScrollPosition', startingScrollPosition);
+
+      console.log(heroCenter);
+
+      window.addEventListener('scroll', () => {
+         let currentScroll = window.scrollY;
+
+         console.log('currentScroll:', currentScroll);
+      });
+
+
+
+   });
+}
+
+positionBullet();
