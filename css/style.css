@@ -125,6 +125,7 @@ body {
   width: 100%;
   top: 35lvh;
   z-index: 1;
+  transition: top 0.8s ease;
 }
 
 .wrapper {
