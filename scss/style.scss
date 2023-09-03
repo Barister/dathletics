@@ -107,9 +107,7 @@ body {
    appearance: none;
    border: 1px dashed #C2F9BB;
    height: 1px;
-   //outline: none;
-   //border-radius: 5px;
-   //background: #a52a2a;
+   
    margin: 0px 0px 0px 0px;
    padding: 0px 0px 0px 0px;
 }
@@ -172,15 +170,13 @@ body {
    margin-bottom: 1px;
    box-shadow: 1px 1px 1px rgba(89, 109, 72, 0.3);
    transition: all 0.8s ease 0s;
-   //transform-origin: right;
-   //opacity: 0.8;
+   
    cursor: pointer;
    &.full {
       width: 44px;
       position: relative;
       right: 27px;
-      //transform: scaleX(-1) translateX(25px);
-      //transform-origin: right;
+      
    }
    @media (max-width: 1530px) {
       width: 10px;
@@ -202,16 +198,7 @@ body {
    }
 }
 
-.bullet02 {
-}
-.bullet03 {
-}
-.bullet04 {
-}
-.bullet05 {
-}
-.bullet06 {
-}
+
 
 
 //Style CSS
@@ -402,11 +389,6 @@ body {
          font-size: 2.8rem;
       }
    }
-
-   /* .menu__link */
-
-   &__link {
-   }
 }
 
 .page {
@@ -501,8 +483,7 @@ body {
    top: 0;
    left: 0;
 }
-.bullet-img {
-}
+
 
 
 .services-cards {
@@ -578,10 +559,6 @@ body {
 }
 .actions-section {
 
-   /* .actions-section__container */
-
-   &__container {
-   }
 
    /* .actions-section__title */
 
@@ -590,11 +567,6 @@ body {
       margin: 0px 0px 35px 0px;
    }
 
-   /* .actions-section__content */
-
-   &__content {
-
-   }
 }
 
 .content-actions {
@@ -683,13 +655,6 @@ body {
 }
 
 
-.page {
-
-   /* .page__catalog */
-
-   &__catalog {
-   }
-}
 .catalog-section {
    margin: 0px 0px 130px 0px;
    @media (max-width: 950px) {
@@ -698,10 +663,7 @@ body {
    @media (max-width: 500px) {
       margin: 0px 0px 70px 0px;
    }
-   /* .catalog-section__container */
 
-   &__container {
-   }
 
    /* .catalog-section__title */
 
@@ -709,12 +671,6 @@ body {
       margin: 0px 0px 45px 0px;
    }
 
-   /* .catalog-section__content */
-
-   &__content {
-   }
-
-   
 }
 
 
@@ -865,14 +821,6 @@ body {
 
 
 
-
-.page {
-
-   /* .page__testimonials */
-
-   &__testimonials {
-   }
-}
 .testimonials-section {
    margin: 0px 0px 195px 0px;
    @media (max-width: 950px) {
@@ -1010,20 +958,7 @@ body {
    @media (max-width: 500px) {
       margin: 110px 0px 70px 0px;
    }
-   /* .contacts-section__container */
 
-   &__container {
-   }
-
-   /* .contacts-section__header */
-
-   &__header {
-   }
-
-   /* .contacts-section__content */
-
-   &__content {
-   }
 }
 .header-contacts {
 

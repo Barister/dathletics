@@ -99,7 +99,7 @@ elseHeader.addEventListener('click', () => {
 });
 
 
-// slider value change after touch move of content
+// slider value change after touch move of content for testimonials and gallery
 
 function handleContentScroll(contentContainer, scrollBar) {
    let contentScrollLeft = contentContainer.scrollLeft;
@@ -140,7 +140,7 @@ galleryContentContainer.addEventListener('pointermove', function (event) {
 
 
 
-//slider scroll of sections-body-content
+//slider scroll of sections-body-content for testimonials and gallery
 
 function slideSection(targetInput, targetClass) {
    let scrollBar = document.querySelector(`.${targetInput}`);
