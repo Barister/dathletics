@@ -178,30 +178,38 @@ toreachBtn.addEventListener('click', () => {
 
 //pagination bullet
 
-const bullet = document.querySelector('.wrapper-bullet');
-//const bulletContainer = document.querySelector('.wrapper__container');
+const bulletContainer = document.querySelector('.wrapper-bullet');
+const allBullets = document.querySelectorAll('.bullet');
 
-const hero = document.querySelector('.section-hero__background');
+const aboutUs = document.querySelector('#about-us');
+const actions = document.querySelector('#actions');
+const catalog = document.querySelector('#catalog');
+const testimonials = document.querySelector('#testimonials');
+const gallery = document.querySelector('#gallery');
+const contacts = document.querySelector('#contacts');
 
-function positionBullet() {
-   document.addEventListener('DOMContentLoaded', () => {
+const sectionsArray = [header, actions, catalog, testimonials, gallery, contacts];
+const bulletParts = Array.from(allBullets);
 
-      let heroCenter = hero.offsetHeight / 2;
-      let startingScrollPosition = window.scrollY;
+// Функция для обновления классов буллетов
+function updateBullets() {
+   const scrollY = window.scrollY;
 
-      console.log('startingScrollPosition', startingScrollPosition);
+   bulletParts.forEach((bullet, index) => {
+      const section = sectionsArray[index];
+      const sectionTop = section.offsetTop;
 
-      console.log(heroCenter);
-
-      window.addEventListener('scroll', () => {
-         let currentScroll = window.scrollY;
-
-         console.log('currentScroll:', currentScroll);
-      });
-
-
-
+      if (scrollY >= sectionTop) {
+         bullet.classList.add('full');
+      } else {
+         bullet.classList.remove('full');
+      }
    });
 }
 
-positionBullet();
+// Обновление классов буллетов при загрузке страницы и при прокрутке
+window.addEventListener('load', updateBullets);
+window.addEventListener('click', updateBullets);
+window.addEventListener('scroll', updateBullets);
+
+

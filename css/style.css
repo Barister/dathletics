@@ -27,6 +27,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
+h2 {
+  padding-top: 100px;
+  margin-top: -100px;
+}
+
 button, input {
   font-family: inherit;
   font-weight: inherit;
@@ -133,6 +138,7 @@ body {
   position: absolute;
   right: -50px;
   top: 0;
+  text-align: right;
 }
 @media (max-width: 1530px) {
   .wrapper-bullet {
@@ -150,10 +156,12 @@ body {
   z-index: 50;
   height: 8px;
   width: 17px;
+  right: 0;
   background-color: #C2F9BB;
   border-radius: 2px;
   margin-bottom: 1px;
   box-shadow: 1px 1px 1px rgba(89, 109, 72, 0.3);
+  transition: all 0.8s ease 0s;
   cursor: pointer;
 }
 .bullet.full {
@@ -833,21 +841,6 @@ body {
      object-fit: cover;
 }
 
-.gallery-section {
-  margin: 0px 0px 195px 0px;
-  /* .gallery-section__container */
-}
-@media (max-width: 950px) {
-  .gallery-section {
-    margin: 0px 0px 130px 0px;
-  }
-}
-@media (max-width: 500px) {
-  .gallery-section {
-    margin: 0px 0px 110px 0px;
-  }
-}
-
 .gallery-section-title {
   margin: 0px 0px 40px 0px;
 }
@@ -872,19 +865,19 @@ body {
 }
 
 .contacts-section {
-  margin: 0px 0px 135px 0px;
+  margin: 195px 0px 135px 0px;
   /* .contacts-section__container */
   /* .contacts-section__header */
   /* .contacts-section__content */
 }
 @media (max-width: 950px) {
   .contacts-section {
-    margin: 0px 0px 90px 0px;
+    margin: 130px 0px 90px 0px;
   }
 }
 @media (max-width: 500px) {
   .contacts-section {
-    margin: 0px 0px 70px 0px;
+    margin: 110px 0px 70px 0px;
   }
 }
 .header-contacts {
