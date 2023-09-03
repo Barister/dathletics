@@ -532,7 +532,7 @@ body {
 }
 @media (max-width: 500px) {
   .page__actions {
-    padding: 50px 0px 70px 0px;
+    padding: 0px 0px 50px 0px;
   }
 }
 
@@ -637,7 +637,7 @@ body {
 }
 @media (max-width: 500px) {
   .catalog-section {
-    margin: 0px 0px 70px 0px;
+    margin: 0px 0px 0px 0px;
   }
 }
 .catalog-section__title {
@@ -682,6 +682,11 @@ body {
 .cards-catalog {
   margin: 0px 0px 60px 0px;
   /* .cards-catalog__item */
+}
+@media (max-width: 500px) {
+  .cards-catalog {
+    margin: 0px 0px 30px 0px;
+  }
 }
 .cards-catalog__item {
   display: flex;
@@ -773,7 +778,7 @@ body {
 }
 @media (max-width: 500px) {
   .testimonials-section {
-    margin: 0px 0px 110px 0px;
+    margin: 0px 0px 20px 0px;
   }
 }
 .testimonials-section__title {
@@ -835,7 +840,7 @@ body {
 }
 
 .gallery-section-title {
-  margin: 0px 0px 40px 0px;
+  margin: 40px 0px 40px 0px;
 }
 
 .body-gallery {
@@ -853,8 +858,23 @@ body {
   height: 0.5rem; /* Высота скрытого скролл-бара (для вертикальной прокрутки) */
   display: none; /* Скрытие стандартного скролл-бара */
 }
+@media (max-width: 450px) {
+  .body-gallery {
+    grid-template-columns: repeat(4, 260px);
+  }
+}
+.body-gallery__image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 .body-gallery__image img {
   border-radius: 17px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .contacts-section {
@@ -867,7 +887,7 @@ body {
 }
 @media (max-width: 500px) {
   .contacts-section {
-    margin: 110px 0px 70px 0px;
+    margin: 50px 0px 70px 0px;
   }
 }
 
